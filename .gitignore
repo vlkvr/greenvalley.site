@@ -1,5 +1,5 @@
-# folder logs
-logs/
+# folders
+design/
 
-# txt-files
-docs/*.txt
+# files
+*.zip
