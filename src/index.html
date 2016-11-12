@@ -1,16 +1,325 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
   <meta charset="UTF-8">
-  <title>Green Valley - Main</title>
+  <title>Green Valley</title>
 </head>
+
 <body>
-  <div class="header">
 
+  <!-- Header -->
+  <div class="page_header--logo">
+    <a href="/" class="main_logo">
+      <img src="img/" alt="Логотип Green Valley">
+    </a>
   </div>
 
-  <div class="footer">
+  <div class="main_nav">
+    <nav class="main_nav--nav">
+      <ul class="main_nav--list">
+        <li class="main_nav--item  main_nav--item-active"><a class="main_nav--link" href="/">Номера</a></li>
+        <li class="main_nav--item"><a class="main_nav--link" href="/">Коттедж</a></li>
+        <li class="main_nav--item"><a class="main_nav--link" href="/">Ресторан</a></li>
+        <li class="main_nav--item"><a class="main_nav--link" href="/">Отдых</a></li>
+        <li class="main_nav--item"><a class="main_nav--link" href="/">Контакты</a></li>
+      </ul>
+    </nav>
+    <span class="main_nav--toggler"></span>
+  </div>
+
+  <div class="page_header--contacts">
+    <a href="tel:+78127775588" class="page_header--phone_link">+7 812 777-55-88</a>
+    <p class="page_header--address">г. Санкт-Петербург, Приморское ш.600</p>
+  </div>
+
+  <a href="#booking-form" class="btn  btn-bg_orange  btn-icon_calendar">Забронировать</a>
+  <!-- /Header -->
+
+  <!-- Switcher -->
+  <div class="rest_switcher">
+
+    <ul class="rest_switcher--tabs">
+      <li class="rest_switcher--tab_item"><a href="#rest_family" class="rest_switcher--link  rest_switcher--link-active">Семейный отдых</a></li>
+      <li class="rest_switcher--tab_item"><a href="#rest_company" class="rest_switcher--link">Корпоративный</a></li>
+    </ul>
+
+    <!-- slider -->
+    <div class="rest_switcher--slider">
+      <section class="rest_switcher--slide  rest_switcher--slide-active" id="rest_family" >
+        <div class="rest_switcher--slide_inner">
+          <h1 class="rest_switcher--slide_title">Семейный отдых на берегу Финского залива</h1>
+          <p class="rest_switcher--slide_desc">Green Valley - это современная база отдыха в курортном райне для здорового отдыха всей семей.</p>
+        </div>
+      </section>
+      <section class="rest_switcher--slide">
+        <div class="rest_switcher--slide_inner">
+          <h1 class="rest_switcher--slied_title">Корпоративный отдых на берегу Финского залива</h1>
+          <p class="rest_switcher--slide_desc">Green Valley - это современная база отдыха в курортном райне для нездорового отдыха всей компанией.</p>
+        </div>
+      </section>
+    </div>
+    <!-- /slider -->
+
+    <!-- options -->
+    <div class="rest_switcher--options">
+
+      <section class="rest_switcher--options_item  rest_switcher--option_item-active">
+        <div class="rest_switcher--options_inner">
+          <h1 class="rest_switcher--options_title">Здоровый отдых</h1>
+          <p class="rest_switcher--options_desc">
+            Плавайте в бассейне, играйте в волейбол, футбол и другие игры. Устройте семейный пикник с шашлыками или снимите напряжение в бане или спа.<br>
+            Почувствуйте отдых!
+          </p>
+          <ul class="rest_switcher--options_list">
+            <li class="rest_switcher--option">
+              <span class="rest_switcher--option_img" style="background-image: url();"></span>
+              <span class="rest_switcher--option_text">бассейн</span>
+            </li>
+            <li class="rest_switcher--option">
+              <span class="rest_switcher--option_img" style="background-image: url();"></span>
+              <span class="rest_switcher--option_text">спортивная площадка</span>
+            </li>
+            <li class="rest_switcher--option">
+              <span class="rest_switcher--option_img" style="background-image: url();"></span>
+              <span class="rest_switcher--option_text">бильярд</span>
+            </li>
+            <li class="rest_switcher--option">
+              <span class="rest_switcher--option_img" style="background-image: url();"></span>
+              <span class="rest_switcher--option_text">спа</span>
+            </li>
+            <li class="rest_switcher--option">
+              <span class="rest_switcher--option_img" style="background-image: url();"></span>
+              <span class="rest_switcher--option_text">бани</span>
+            </li>
+            <li class="rest_switcher--option">
+              <span class="rest_switcher--option_img" style="background-image: url();"></span>
+              <span class="rest_switcher--option_text">анимация</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="rest_switcher--options_item">
+        <div class="rest_switcher--options_inner">
+          <h1 class="rest_switcher--options_title">Нездоровый отдых</h1>
+          <p class="rest_switcher--options_desc">
+            Плавайте пьяный по болоту, играйте в литрбол и другие игры. Устройте корпоративный трешняк с Блек-Джеком и шлюхами или снимите со снайперской винтовки пару депутатов на соседней вилле.<br>
+            Почувствуйте треш, месиво, ахтунг!
+          </p>
+          <ul class="rest_switcher--options_list">
+            <li class="rest_switcher--option">
+              <span class="rest_switcher--option_img" style="background-image: url();"></span>
+              <span class="rest_switcher--option_text">болото</span>
+            </li>
+            <li class="rest_switcher--option">
+              <span class="rest_switcher--option_img" style="background-image: url();"></span>
+              <span class="rest_switcher--option_text">стрельбище</span>
+            </li>
+            <li class="rest_switcher--option">
+              <span class="rest_switcher--option_img" style="background-image: url();"></span>
+              <span class="rest_switcher--option_text">боулинг</span>
+            </li>
+            <li class="rest_switcher--option">
+              <span class="rest_switcher--option_img" style="background-image: url();"></span>
+              <span class="rest_switcher--option_text">бар</span>
+            </li>
+            <li class="rest_switcher--option">
+              <span class="rest_switcher--option_img" style="background-image: url();"></span>
+              <span class="rest_switcher--option_text">прорубь</span>
+            </li>
+            <li class="rest_switcher--option">
+              <span class="rest_switcher--option_img" style="background-image: url();"></span>
+              <span class="rest_switcher--option_text">бдсм</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+    </div>
+    <!-- /options -->
 
   </div>
+  <!-- /Switcher -->
+
+  <!-- Gallery -->
+  <div class="gallery">
+
+  </div>
+  <!-- /Gallery -->
+
+  <!-- Reveiws -->
+  <div class="reviews">
+    <div class="reviews--inner">
+      <h2 class="reviews--title">Отзывы</h2>
+      <div class="reviews--slider">
+        <div class="review">
+          <figure class="review--author">
+            <img class="review--author_img" src="" alt="">
+            <figcaption class="review--author_name">Екатерина В.</figcaption>
+            <a class="review--author_link" href=""><span class="icon icon-vk"></span></a>
+          </figure>
+          <p class="review--text">
+            Наша семья счастлива, что открыла для себя Green Valley. Замечательный, комфортный отдых. Хорошее место, приветливый персонал, вкусная еда. Стали постоянными гостями!
+          </p>
+          <div class="review--date">
+            <span class="review--date_header">Дата отдыха:</span>
+            <span class="review--period">01.06.2015 - 08.06.2015</span>
+          </div>
+        </div>
+        <div class="review">
+          <figure class="review--author">
+            <img class="review--author_img" src="" alt="">
+            <figcaption class="review--author_name">Елена Д.</figcaption>
+            <a class="review--author_link" href=""><span class="icon icon-fb"></span></a>
+          </figure>
+          <p class="review--text">
+            Спасибо всем без исключения сотрудникам отеля за прекрасные дни, проведённые у вас! Наслаждались тишиной, отдохнули прекрасно. Понравилось всё: тёплый приём персоналом.
+          </p>
+          <div class="review--date">
+            <span class="review--date_header">Дата отдыха:</span>
+            <span class="review--period">15.05.2015 - 20.05.2015</span>
+          </div>
+        </div>
+        <div class="review">
+          <figure class="review--author">
+            <img class="review--author_img" src="" alt="">
+            <figcaption class="review--author_name">Екатерина В.</figcaption>
+            <a class="review--author_link" href=""><span class="icon icon-vk"></span></a>
+          </figure>
+          <p class="review--text">
+            Наша семья счастлива, что открыла для себя Green Valley. Замечательный, комфортный отдых. Хорошее место, приветливый персонал, вкусная еда. Стали постоянными гостями!
+          </p>
+          <div class="review--date">
+            <span class="review--date_header">Дата отдыха:</span>
+            <span class="review--period">01.06.2015 - 08.06.2015</span>
+          </div>
+        </div>
+        <div class="review">
+          <figure class="review--author">
+            <img class="review--author_img" src="" alt="">
+            <figcaption class="review--author_name">Елена Д.</figcaption>
+            <a class="review--author_link" href=""><span class="icon icon-fb"></span></a>
+          </figure>
+          <p class="review--text">
+            Спасибо всем без исключения сотрудникам отеля за прекрасные дни, проведённые у вас! Наслаждались тишиной, отдохнули прекрасно. Понравилось всё: тёплый приём персоналом.
+          </p>
+          <div class="review--date">
+            <span class="review--date_header">Дата отдыха:</span>
+            <span class="review--period">15.05.2015 - 20.05.2015</span>
+          </div>
+        </div>
+      </div>
+      <a href="" class="btn">Все отзывы</a>
+    </div>
+  </div>
+  <!-- /Reveiws -->
+
+  <!-- Discount -->
+  <div class="discount">
+    <h2 class="discount--title"></h2>
+    <div class="discount--slider">
+      <div class="discount--slide  discount--slide-active">
+        <div class="discount--text">
+          <h3>Скидки в Мае</h3>
+          <p>Забронируйте номер или коттедж любой категории до 31 июня и получите скидку 10%</p>
+        </div>
+      </div>
+      <div class="discount--slide">
+        <div class="discount--text">
+          <h3>Скидки для молодоженов</h3>
+          <p>Для молодеженов скидка 50%</p>
+        </div>
+      </div>
+    </div>
+    <ul class="discount--toggler">
+      <li><a href=""></a></li>
+      <li><a href=""></a></li>
+    </ul>
+  </div>
+  <!-- /Discount -->
+
+  <!-- Location -->
+  <div class="location">
+    <h2 class="location--title">Как до нас добраться</h2>
+    <div class="location--map"></div>
+    <div class="location--transport">
+      <div class="location--route">
+        <span class="location--route_img style="background-image: url();"></span>
+        <span class="location--route_title">Автобус</span>
+        <p class="location--route_text">
+          <strong>№ 211</strong> от станции метро «Черная речка» до остановки «Санаторий Репино»<br>
+          <strong>№ 305К</strong> от станции метро «Старая деревня»<br>
+          <strong>№ 680К</strong> от станции метро «Проспект Просвещения»<br>
+          <strong>№ 400К</strong> от станции метро «Площадь Ленина»
+        </p>
+      </div>
+      <div class="location--route">
+        <span class="location--route_img style="background-image: url();"></span>
+        <span class="location--route_title">Электропоезд</span>
+        <p class="location--route_text">
+          Электропоезд Выборгского направления от Финляндского вокзала Санкт-Петербурга до платформы "Репино"
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- /Location -->
+
+  <!-- Accomodation -->
+  <div class="accomodation">
+    <div class="accomodation--inner">
+      <h2 class="accomodation--title">Где вы хотите отдохнуть?</h2>
+      <div class="accomodation--list">
+        <div class="accomodation--item">
+          <img src="/" alt="" class="accomodation--item_img">
+          <div class="accomodation--item_text">
+            <h3>В отеле</h3>
+            <p>От <span>4000</span>руб./сутки</p>
+          </div>
+        </div>
+        <div class="accomodation--item">
+          <img src="/" alt="" class="accomodation--item_img">
+          <div class="accomodation--item_text">
+            <h3>В коттедже</h3>
+            <p>От <span>6000</span>руб./сутки</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /Accomodation -->
+
+  <!-- Footer -->
+  <footer class="page_footer">
+    <div class="page_footer--inner">
+      <div class="page_footer--address">
+        <p>
+          г. Санкт-Петербург<br>
+          Приморское ш.600
+        </p>
+      </div>
+      <div class="page_footer--logo">
+        <a href="/" class="main_logo">
+          <img src="img/" alt="Логотип Green Valley">
+        </a>
+        <div class="page_footer--social">
+          <a href="" class="page_footer--social_link"><span class="icon icon-green icon-vk"></span></a>
+          <a href="" class="page_footer--social_link"><span class="icon icon-green icon-ig"></span></a>
+          <a href="" class="page_footer--social_link"><span class="icon icon-green icon-fb"></span></a>
+        </div>
+      </div>
+      <div class="page_footer--contacts">
+        <p>
+          <a class="page_footer--phone_link" href="tel:+78127775588">+7 812 777-55-88</a>
+          <a class="page_footer--email_link" href="mailto:info@greenvalley.ru">info@greenvalley.ru</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer -->
+
+  <script src="js/live.js"></script>
+
 </body>
+
 </html>
