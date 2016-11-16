@@ -4,36 +4,39 @@
 <head>
   <meta charset="UTF-8">
   <title>Green Valley - Главная</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
 
   <!-- Header -->
-  <div class="page_header--logo">
-    <a href="index.html" class="main_logo">
-      <img src="img/" alt="Логотип Green Valley">
-    </a>
-  </div>
+  <header class="page_header">
+    <div class="page_header--logo">
+      <a href="index.html" class="main_logo">
+        <img src="img/" alt="Логотип Green Valley">
+      </a>
+    </div>
 
-  <div class="main_nav">
-    <nav class="main_nav--nav">
-      <ul class="main_nav--list">
-        <li class="main_nav--item  main_nav--item-active"><a class="main_nav--link" href="room_list.html">Номера</a></li>
-        <li class="main_nav--item"><a class="main_nav--link" href="/">Коттедж</a></li>
-        <li class="main_nav--item"><a class="main_nav--link" href="/">Ресторан</a></li>
-        <li class="main_nav--item"><a class="main_nav--link" href="/">Отдых</a></li>
-        <li class="main_nav--item"><a class="main_nav--link" href="/">Контакты</a></li>
-      </ul>
-    </nav>
-    <span class="main_nav--toggler"></span>
-  </div>
+    <div class="main_nav">
+      <nav class="main_nav--nav">
+        <ul class="main_nav--list">
+          <li class="main_nav--item  main_nav--item-active"><a class="main_nav--link" href="room_list.html">Номера</a></li>
+          <li class="main_nav--item"><a class="main_nav--link" href="/">Коттедж</a></li>
+          <li class="main_nav--item"><a class="main_nav--link" href="/">Ресторан</a></li>
+          <li class="main_nav--item"><a class="main_nav--link" href="/">Отдых</a></li>
+          <li class="main_nav--item"><a class="main_nav--link" href="/">Контакты</a></li>
+        </ul>
+      </nav>
+      <span class="main_nav--toggler"></span>
+    </div>
 
-  <div class="page_header--contacts">
-    <a href="tel:+78127775588" class="page_header--phone_link">+7 812 777-55-88</a>
-    <p class="page_header--address">г. Санкт-Петербург, Приморское ш.600</p>
-  </div>
+    <div class="page_header--contacts">
+      <a href="tel:+78127775588" class="page_header--phone_link">+7 812 777-55-88</a>
+      <p class="page_header--address">г. Санкт-Петербург, Приморское ш.600</p>
+    </div>
 
-  <a href="#booking-form" class="btn  btn-bg_orange  btn-icon_calendar">Забронировать</a>
+    <a href="#booking_form" class="btn  btn-bg_orange  btn-icon_calendar">Забронировать</a>
+  </header>
   <!-- /Header -->
 
   <!-- Switcher -->
@@ -245,7 +248,7 @@
     <div class="location--map"></div>
     <div class="location--transport">
       <div class="location--route">
-        <span class="location--route_img style="background-image: url();"></span>
+        <span class="location--route_img" style="background-image: url();"></span>
         <span class="location--route_title">Автобус</span>
         <p class="location--route_text">
           <strong>№ 211</strong> от станции метро «Черная речка» до остановки «Санаторий Репино»<br>
