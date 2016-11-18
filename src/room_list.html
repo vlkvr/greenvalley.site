@@ -9,31 +9,33 @@
 <body>
 
   <!-- Header -->
-  <div class="page_header--logo">
-    <a href="index.html" class="main_logo">
-      <img src="img/" alt="Логотип Green Valley">
-    </a>
-  </div>
+  <header class="page_header">
+    <div class="page_header--logo">
+      <a href="index.html" class="main_logo">
+        <img src="img/" alt="Логотип Green Valley">
+      </a>
+    </div>
 
-  <div class="main_nav">
-    <nav class="main_nav--nav">
-      <ul class="main_nav--list">
-        <li class="main_nav--item  main_nav--item-active"><a class="main_nav--link" href="/">Номера</a></li>
-        <li class="main_nav--item"><a class="main_nav--link" href="/">Коттедж</a></li>
-        <li class="main_nav--item"><a class="main_nav--link" href="/">Ресторан</a></li>
-        <li class="main_nav--item"><a class="main_nav--link" href="/">Отдых</a></li>
-        <li class="main_nav--item"><a class="main_nav--link" href="/">Контакты</a></li>
-      </ul>
-    </nav>
-    <span class="main_nav--toggler"></span>
-  </div>
+    <div class="main_nav">
+      <nav class="main_nav--nav">
+        <ul class="main_nav--list">
+          <li class="main_nav--item  main_nav--item-active"><a class="main_nav--link" href="/">Номера</a></li>
+          <li class="main_nav--item"><a class="main_nav--link" href="/">Коттедж</a></li>
+          <li class="main_nav--item"><a class="main_nav--link" href="/">Ресторан</a></li>
+          <li class="main_nav--item"><a class="main_nav--link" href="/">Отдых</a></li>
+          <li class="main_nav--item"><a class="main_nav--link" href="/">Контакты</a></li>
+        </ul>
+      </nav>
+      <span class="main_nav--toggler"></span>
+    </div>
 
-  <div class="page_header--contacts">
-    <a href="tel:+78127775588" class="page_header--phone_link">+7 812 777-55-88</a>
-    <p class="page_header--address">г. Санкт-Петербург, Приморское ш.600</p>
-  </div>
+    <div class="page_header--contacts">
+      <a href="tel:+78127775588" class="page_header--phone_link">+7 812 777-55-88</a>
+      <p class="page_header--address">г. Санкт-Петербург, Приморское ш.600</p>
+    </div>
 
-  <a href="#booking-form" class="btn  btn-bg_orange  btn-icon_calendar">Забронировать</a>
+    <a href="#booking-form" class="btn  btn-bg_orange  btn-icon_calendar">Забронировать</a>
+  </header>
   <!-- /Header -->
 
   <!-- Banner -->
@@ -49,60 +51,62 @@
   <!-- /Banner -->
 
   <!-- Categories -->
-  <div class="categories">
-    <h2 class="categories--title">Категории</h2>
+  <main class="categories">
+    <div class="categories--inner">
+      <h2 class="categories--title">Категории</h2>
 
-    <ul class="categories--list">
-      <li class="categories--item">
-        <h3 class="categories--item_name">Эконом</h3>
-        <span class="categories--item_price">от <strong>3400</strong> руб./сутки</span>
-        <p class="categories--item_desc">
-          В отеле 30 таких номеров площадью от 16 до 20 кв.м. Рассчитаны на проживание 1-2 человек. Часть номеров с видом на Финский залив.
-        </p>
-        <a href="" class="btn  btn-orange">Забронировать</a>
-        <a href="" class="btn btn-link">подробнее</a>
-        <div class="categories--item_img">
-          <img src="/" alt="">
-        </div>
-      </li>
-      <li class="categories--item">
-        <h3 class="categories--item_name">Стандарт</h3>
-        <span class="categories--item_price">от <strong>4000</strong> руб./сутки</span>
-        <p class="categories--item_desc">
-          В отеле 20 таких номеров. Рассчитаны на проживание 2-3 человек. Площадь номера 20-25 кв.м, состоит из гостевой и спальной зоны.
-        </p>
-        <a href="" class="btn  btn-orange">Забронировать</a>
-        <a href="" class="btn btn-link">подробнее</a>
-        <div class="categories--item_img">
-          <img src="/" alt="">
-        </div>
-      </li>
-      <li class="categories--item">
-        <h3 class="categories--item_name">Стандарт +</h3>
-        <span class="categories--item_price">от <strong>4500</strong> руб./сутки</span>
-        <p class="categories--item_desc">
-          В отеле 15 таких номеров. 2-комнатный номер предназначен для проживания 2-4 человек. Площадь номера от 35 кв.м.
-        </p>
-        <a href="" class="btn  btn-orange">Забронировать</a>
-        <a href="" class="btn btn-link">подробнее</a>
-        <div class="categories--item_img">
-          <img src="/" alt="">
-        </div>
-      </li>
-      <li class="categories--item">
-        <h3 class="categories--item_name">Люкс</h3>
-        <span class="categories--item_price">от <strong>5700</strong> руб./сутки</span>
-        <p class="categories--item_desc">
-          В отеле 5 таких номеров. Просторные номера площадью до 40 кв.м. с видом на Финский залив, выполнен в оригинальном стиле
-        </p>
-        <a href="" class="btn  btn-orange">Забронировать</a>
-        <a href="" class="btn btn-link">подробнее</a>
-        <div class="categories--item_img">
-          <img src="/" alt="">
-        </div>
-      </li>
-    </ul>
-  </div>
+      <ul class="categories--list">
+        <li class="categories--item">
+          <h3 class="categories--item_name">Эконом</h3>
+          <span class="categories--item_price">от <strong>3400</strong> руб./сутки</span>
+          <p class="categories--item_desc">
+            В отеле 30 таких номеров площадью от 16 до 20 кв.м. Рассчитаны на проживание 1-2 человек. Часть номеров с видом на Финский залив.
+          </p>
+          <a href="" class="btn  btn-orange">Забронировать</a>
+          <a href="" class="btn btn-link">подробнее</a>
+          <div class="categories--item_img">
+            <img src="/" alt="">
+          </div>
+        </li>
+        <li class="categories--item">
+          <h3 class="categories--item_name">Стандарт</h3>
+          <span class="categories--item_price">от <strong>4000</strong> руб./сутки</span>
+          <p class="categories--item_desc">
+            В отеле 20 таких номеров. Рассчитаны на проживание 2-3 человек. Площадь номера 20-25 кв.м, состоит из гостевой и спальной зоны.
+          </p>
+          <a href="" class="btn  btn-orange">Забронировать</a>
+          <a href="" class="btn btn-link">подробнее</a>
+          <div class="categories--item_img">
+            <img src="/" alt="">
+          </div>
+        </li>
+        <li class="categories--item">
+          <h3 class="categories--item_name">Стандарт +</h3>
+          <span class="categories--item_price">от <strong>4500</strong> руб./сутки</span>
+          <p class="categories--item_desc">
+            В отеле 15 таких номеров. 2-комнатный номер предназначен для проживания 2-4 человек. Площадь номера от 35 кв.м.
+          </p>
+          <a href="" class="btn  btn-orange">Забронировать</a>
+          <a href="" class="btn btn-link">подробнее</a>
+          <div class="categories--item_img">
+            <img src="/" alt="">
+          </div>
+        </li>
+        <li class="categories--item">
+          <h3 class="categories--item_name">Люкс</h3>
+          <span class="categories--item_price">от <strong>5700</strong> руб./сутки</span>
+          <p class="categories--item_desc">
+            В отеле 5 таких номеров. Просторные номера площадью до 40 кв.м. с видом на Финский залив, выполнен в оригинальном стиле
+          </p>
+          <a href="" class="btn  btn-orange">Забронировать</a>
+          <a href="" class="btn btn-link">подробнее</a>
+          <div class="categories--item_img">
+            <img src="/" alt="">
+          </div>
+        </li>
+      </ul>
+    </div>
+  </main>
   <!-- /Categories -->
 
   <!-- Footer -->

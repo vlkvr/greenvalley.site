@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Green Valley - Бронирование</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="page_header">
+    <div class="page_header--logo">
+      <a href="index.html" class="main_logo">
+        <img src="img/" alt="Логотип Green Valley">
+      </a>
+    </div>
+
+    <div class="main_nav">
+      <nav class="main_nav--nav">
+        <ul class="main_nav--list">
+          <li class="main_nav--item  main_nav--item-active"><a class="main_nav--link" href="room_list.html">Номера</a></li>
+          <li class="main_nav--item"><a class="main_nav--link" href="/">Коттедж</a></li>
+          <li class="main_nav--item"><a class="main_nav--link" href="/">Ресторан</a></li>
+          <li class="main_nav--item"><a class="main_nav--link" href="/">Отдых</a></li>
+          <li class="main_nav--item"><a class="main_nav--link" href="/">Контакты</a></li>
+        </ul>
+      </nav>
+      <span class="main_nav--toggler"></span>
+    </div>
+
+    <div class="page_header--contacts">
+      <a href="tel:+78127775588" class="page_header--phone_link">+7 812 777-55-88</a>
+      <p class="page_header--address">г. Санкт-Петербург, Приморское ш.600</p>
+    </div>
+
+    <a href="#booking_form" class="btn  btn-bg_orange  btn-icon_calendar">Забронировать</a>
+  </header>
+  <!-- /Header -->
+
+  <div class="booking_head">
+    <div class="booking_head--inner">
+      <h1 class="booking_head--title">Бронирование</h1>
+      <p class="text">Чтобы забронировать номер в отеле или коттедж, заполните форму ниже или просто позвоните по телефону: <strong>+7 812 777-55-88</strong></p>
+    </div>
+  </div>
+
+  <form action="" class="booking_form">
+
+    <div class="booking_form--step">
+      <div class="booking_form--step_inner">
+        <p class="booking_form--step_number">
+          Шаг 1
+        </p>
+        <h2 class="booking_form--step_title">Дата отдыха</h2>
+      </div>
+      <ul class="booking_form--date_list">
+        <li class="booking_form--date_item">
+          <span>Дата въезда</span>
+          <div class="booking_form--date_selection">
+            <label for="arrival_day"><input type="number" id="arrival_day" min="1" max="31" placehonder="ДД" required></label>
+            <label for="arrival_month"><input type="number" id="arrival_month" min="1" max="12" placehonder="ММ" required></label>
+            <label for="arrival_year"><input type="number" id="arrival_year" min="2016" max="2020" placehonder="ГГГГ" required></label>
+          </div>
+        </li>
+        <li class="booking_form--date_item">
+          <span>Дата выезда</span>
+          <div class="booking_form--date_selection">
+            <label for="arrival_day"><input type="number" id="arrival_day" min="1" max="31" placehonder="ДД" required></label>
+            <label for="arrival_month"><input type="number" id="arrival_month" min="1" max="12" placehonder="ММ" required></label>
+            <label for="arrival_year"><input type="number" id="arrival_year" min="2016" max="2020" placehonder="ГГГГ" required></label>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="booking_form--step">
+      <div class="booking_form--step_inner">
+        <p class="booking_form--step_number">
+          Шаг 2
+        </p>
+        <h2 class="booking_form--step_title">Место проживания</h2>
+      </div>
+      <ul class="booking_form--place_list">
+        <li class="booking_form--place_item">
+          <span>Отель</span>
+          <label for=""><input type="radio" name="place_type"></label>
+        </li>
+        <li class="booking_form--place_item">
+          <span>Коттедж</span>
+          <label for=""><input type="radio" name="place_type" checked></label>
+        </li>
+      </ul>
+    </div>
+
+  </form>
+
+  <script src="js/live.js"></script>
+</body>
+</html>
