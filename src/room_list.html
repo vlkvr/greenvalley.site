@@ -3,44 +3,52 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Green Valley - Номера</title>
+  <title>Green Valley - Главная</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 </head>
 
 <body>
 
   <!-- Header -->
   <header class="page_header">
-    <div class="page_header--logo">
-      <a href="index.html" class="main_logo">
-        <img src="img/" alt="Логотип Green Valley">
-      </a>
-    </div>
+    <div class="container">
 
-    <div class="main_nav">
-      <nav class="main_nav--nav">
-        <ul class="main_nav--list">
-          <li class="main_nav--item  main_nav--item-active"><a class="main_nav--link" href="/">Номера</a></li>
-          <li class="main_nav--item"><a class="main_nav--link" href="/">Коттедж</a></li>
-          <li class="main_nav--item"><a class="main_nav--link" href="/">Ресторан</a></li>
-          <li class="main_nav--item"><a class="main_nav--link" href="/">Отдых</a></li>
-          <li class="main_nav--item"><a class="main_nav--link" href="/">Контакты</a></li>
-        </ul>
-      </nav>
-      <span class="main_nav--toggler"></span>
-    </div>
+      <div class="page_header--logo">
+        <a href="index.html" class="main_logo">
+          <img src="img/" alt="Логотип Green Valley">
+        </a>
+      </div>
 
-    <div class="page_header--contacts">
-      <a href="tel:+78127775588" class="page_header--phone_link">+7 812 777-55-88</a>
-      <p class="page_header--address">г. Санкт-Петербург, Приморское ш.600</p>
-    </div>
+      <div class="main_nav">
+        <nav class="main_nav--nav">
+          <ul class="main_nav--list">
+            <li class="main_nav--item  main_nav--item-active"><a class="main_nav--link" href="room_list.html">Номера</a></li>
+            <li class="main_nav--item"><a class="main_nav--link" href="/">Коттедж</a></li>
+            <li class="main_nav--item"><a class="main_nav--link" href="/">Ресторан</a></li>
+            <li class="main_nav--item"><a class="main_nav--link" href="/">Отдых</a></li>
+            <li class="main_nav--item"><a class="main_nav--link" href="/">Контакты</a></li>
+          </ul>
+        </nav>
+        <span class="main_nav--toggler"></span>
+      </div>
 
-    <a href="#booking-form" class="btn  btn-bg_orange  btn-icon_calendar">Забронировать</a>
+      <div class="page_header--contacts">
+        <a href="tel:+78127775588" class="page_header--phone_link">+7 812 777-55-88</a>
+        <p class="page_header--address">г. Санкт-Петербург, Приморское ш.600</p>
+      </div>
+
+      <a href="#booking_form" class="btn  btn-bg_orange  btn-icon_calendar">Забронировать</a>
+
+    </div>
   </header>
   <!-- /Header -->
 
+
+
   <!-- Banner -->
   <div class="banner">
-    <div class="banner--inner">
+    <div class="container">
       <h1 class="banner--title">Номера в отеле Green Valley</h1>
       <p class="banner--text">
         Комфорт и живописный вид на Финский залив и сосновый парк.<br>
@@ -50,12 +58,16 @@
   </div>
   <!-- /Banner -->
 
+
+
   <!-- Categories -->
   <main class="categories">
-    <div class="categories--inner">
+    <div class="container">
+
       <h2 class="categories--title">Категории</h2>
 
       <ul class="categories--list">
+
         <li class="categories--item">
           <h3 class="categories--item_name">Эконом</h3>
           <span class="categories--item_price">от <strong>3400</strong> руб./сутки</span>
@@ -68,6 +80,7 @@
             <img src="/" alt="">
           </div>
         </li>
+
         <li class="categories--item">
           <h3 class="categories--item_name">Стандарт</h3>
           <span class="categories--item_price">от <strong>4000</strong> руб./сутки</span>
@@ -80,6 +93,7 @@
             <img src="/" alt="">
           </div>
         </li>
+
         <li class="categories--item">
           <h3 class="categories--item_name">Стандарт +</h3>
           <span class="categories--item_price">от <strong>4500</strong> руб./сутки</span>
@@ -92,6 +106,7 @@
             <img src="/" alt="">
           </div>
         </li>
+
         <li class="categories--item">
           <h3 class="categories--item_name">Люкс</h3>
           <span class="categories--item_price">от <strong>5700</strong> руб./сутки</span>
@@ -104,40 +119,44 @@
             <img src="/" alt="">
           </div>
         </li>
+
       </ul>
+
     </div>
   </main>
   <!-- /Categories -->
 
-  <!-- Footer -->
-  <footer class="page_footer">
-    <div class="page_footer--inner">
-      <div class="page_footer--address">
-        <p>
-          г. Санкт-Петербург<br>
-          Приморское ш.600
-        </p>
-      </div>
-      <div class="page_footer--logo">
-        <a href="/" class="main_logo">
-          <img src="img/" alt="Логотип Green Valley">
-        </a>
-        <div class="page_footer--social">
-          <a href="" class="page_footer--social_link"><span class="icon icon-green icon-vk"></span></a>
-          <a href="" class="page_footer--social_link"><span class="icon icon-green icon-ig"></span></a>
-          <a href="" class="page_footer--social_link"><span class="icon icon-green icon-fb"></span></a>
-        </div>
-      </div>
-      <div class="page_footer--contacts">
-        <p>
-          <a class="page_footer--phone_link" href="tel:+78127775588">+7 812 777-55-88</a>
-          <a class="page_footer--email_link" href="mailto:info@greenvalley.ru">info@greenvalley.ru</a>
-        </p>
+
+
+<!-- Footer -->
+<footer class="page_footer">
+  <div class="container">
+
+    <div class="page_footer--address">
+      <p>
+        г. Санкт-Петербург<br>
+        Приморское ш.600
+      </p>
+    </div>
+
+    <div class="page_footer--logo">
+      <a href="/" class="main_logo">
+        <img src="img/" alt="Логотип Green Valley">
+      </a>
+      <div class="page_footer--social">
+        <a href="" class="page_footer--social_link  page_footer--social_link-vk"></a>
+        <a href="" class="page_footer--social_link  page_footer--social_link-ig"></a>
+        <a href="" class="page_footer--social_link  page_footer--social_link-fb"></a>
       </div>
     </div>
-  </footer>
-  <!-- Footer -->
 
-  <script src="js/live.js"></script>
+    <a class="page_footer--phone_link" href="tel:+78127775588">+7 812 777-55-88</a>
+    <a class="page_footer--email_link" href="mailto:info@greenvalley.ru">info@greenvalley.ru</a>
+
+  </div>
+</footer>
+<!-- Footer -->
+
 </body>
+
 </html>
