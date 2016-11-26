@@ -1,5 +1,6 @@
 # folders
 _design
+node_modules
 
 # files
 *.zip
