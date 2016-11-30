@@ -23,5 +23,11 @@
     "gulp-sourcemaps": "^1.6.0",
     "ttf2woff": "^2.0.1",
     "ttf2woff2": "^2.0.3"
+  },
+  "config": {
+    "directories": {
+      "source": "./src",
+      "build": "./build"
+    }
   }
 }
