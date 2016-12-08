@@ -21,6 +21,8 @@ body {
   margin-right: auto;
   padding-left: 30px;
   padding-right: 30px;
+  display: -ms-flexbox;
+  display: flex;
 }
 .page_header--logo {
   margin-left: 16.6666667%;
