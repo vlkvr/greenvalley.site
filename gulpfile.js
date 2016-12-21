@@ -2,7 +2,7 @@
 
 // Читаем содержимое package.json в константу
 const pjson = require('./package.json');
-// Получим из константы другую константу с адресами паппок сборки и исходников
+// Получим из константы другую константу с адресами папок сборки и исходников
 const dirs = pjson.config.directories;
 
 // Определим необходимые инструменты
@@ -26,13 +26,14 @@ gulp.task('less', function(){
         mqpacker({ sort: true }),                           // объединение медиавыражений
         ]))
     .pipe(sourcemaps.write('/'))                            // записываем карту кода как отдельный файл (путь из константы)
-    .pipe(gulp.dest(dirs.source + '/css/'))                 // записываем CSS-файл (путь из константы)
+    .pipe(gulp.dest(dirs.build + '/css/'))                  // записываем CSS-файл (путь из константы)
     .pipe(browserSync.stream());                            // обновляем в браузере
   });
 
-// ЗАДАЧА: Сборка HTML (заглушка)
-gulp.task('html', function(callback) {
-  callback();
+// ЗАДАЧА: Сборка HTML
+gulp.task('html', function() {
+  return gulp.src(dirs.source + '/*.html')
+  .pipe(gulp.dest(dirs.build));
 });
 
 // ЗАДАЧА: Сборка всего
@@ -44,10 +45,10 @@ gulp.task('build', gulp.series(
 gulp.task('serve', gulp.series('build', function() {
 
   browserSync.init({                                        // запускаем локальный сервер (показ, автообновление, синхронизацию)
-    server: './src/',                                       // папка, которая будет «корнем» сервера (путь из константы)
+    server: dirs.build,                                     // папка, которая будет «корнем» сервера (путь из константы)
     port: 3000,                                             // порт, на котором будет работать сервер
     startPath: 'index.html',                                // файл, который буде открываться в браузере при старте сервера
-    open: false,                                            // чтобы при каждом старте сервера в браузере не открывалась новая вкладка со страницей
+    //open: false,                                            // чтобы при каждом старте сервера в браузере не открывалась новая вкладка со страницей
   });
 
   gulp.watch(                                               // следим за HTML

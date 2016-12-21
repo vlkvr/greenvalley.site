@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Green Valley - Главная</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="page_header">
+    <div class="page_header--inner">
+
+      <div class="page_header--logo">
+        <a href="index.html" class="main_logo">
+          <img src="img/" alt="Логотип Green Valley">
+        </a>
+      </div>
+
+      <div class="main_nav">
+        <nav class="main_nav--nav">
+          <ul class="main_nav--list">
+            <li class="main_nav--item  main_nav--item-active"><a class="main_nav--link" href="room_list.html">Номера</a></li>
+            <li class="main_nav--item"><a class="main_nav--link" href="/">Коттедж</a></li>
+            <li class="main_nav--item"><a class="main_nav--link" href="/">Ресторан</a></li>
+            <li class="main_nav--item"><a class="main_nav--link" href="/">Отдых</a></li>
+            <li class="main_nav--item"><a class="main_nav--link" href="/">Контакты</a></li>
+          </ul>
+        </nav>
+        <span class="main_nav--toggler"></span>
+      </div>
+
+      <div class="page_header--contacts">
+        <a href="tel:+78127775588" class="page_header--phone_link">+7 812 777-55-88</a>
+        <p class="page_header--address">г. Санкт-Петербург, Приморское ш.600</p>
+      </div>
+
+      <a href="#booking_form" class="btn  btn-bg_orange  btn-icon_calendar">Забронировать</a>
+
+    </div>
+  </header>
+  <!-- /Header -->
+
+
+
+  <!-- Form -->
+  <div class="booking_head">
+    <div class="booking_head--inner">
+      <h1 class="booking_head--title">Бронирование</h1>
+      <p class="text">Чтобы забронировать номер в отеле или коттедж, заполните форму ниже или просто позвоните по телефону: <strong>+7 812 777-55-88</strong></p>
+    </div>
+  </div>
+
+  <form action="" class="booking_form">
+
+    <!-- step 1 -->
+    <div class="booking_form--step">
+      <div class="booking_form--inner">
+
+        <p class="booking_form--step_number">Шаг 1</p>
+        <h2 class="booking_form--step_title">Дата отдыха</h2>
+
+        <ul class="booking_form--date_list">
+          <li class="booking_form--date_item">
+            <span>Дата въезда</span>
+            <div class="booking_form--date_selection">
+              <label for="arrival_day"><input type="number" id="arrival_day" min="1" max="31" placehonder="ДД" required></label>
+              <label for="arrival_month"><input type="number" id="arrival_month" min="1" max="12" placehonder="ММ" required></label>
+              <label for="arrival_year"><input type="number" id="arrival_year" min="2016" max="2020" placehonder="ГГГГ" required></label>
+            </div>
+          </li>
+
+          <li class="booking_form--date_item">
+            <span>Дата выезда</span>
+            <div class="booking_form--date_selection">
+              <label for="arrival_day"><input type="number" id="arrival_day" min="1" max="31" placehonder="ДД" required></label>
+              <label for="arrival_month"><input type="number" id="arrival_month" min="1" max="12" placehonder="ММ" required></label>
+              <label for="arrival_year"><input type="number" id="arrival_year" min="2016" max="2020" placehonder="ГГГГ" required></label>
+            </div>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+    <!-- /step 1 -->
+
+    <!-- step 2 -->
+    <div class="booking_form--step">
+      <div class="booking_form--inner">
+
+        <p class="booking_form--step_number">Шаг 2</p>
+        <h2 class="booking_form--step_title">Место проживания</h2>
+
+        <ul class="booking_form--place_list">
+          <li class="booking_form--place_item">
+            <span>Отель</span>
+            <label for=""><input type="radio" name="place_type"></label>
+          </li>
+
+          <li class="booking_form--place_item">
+            <span>Коттедж</span>
+            <label for=""><input type="radio" name="place_type" checked></label>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+    <!-- /step 2 -->
+
+    <!-- step 3 -->
+    <div class="booking_form--step">
+      <div class="booking_form--inner">
+
+        <p class="booking_form--step_number">Шаг 3</p>
+        <h2 class="booking_form--step_title">Тип коттеджа</h2>
+
+        <ul class="booking_form--cottage_list">
+          <li class="booking_form--cottage_item">
+            <label for="flagman" class="booking_form--cottage_label">Флагман</label>
+            <input type="radio" name="cottage_type" class="booking_form--cottage_input" id="flagman">
+          </li>
+          <li class="booking_form--cottage_item">
+            <label for="ozerny" class="booking_form--cottage_label">Озерный</label>
+            <input type="radio" name="cottage_type" class="booking_form--cottage_input" id="ozerny">
+          </li>
+          <li class="booking_form--cottage_item">
+            <label for="olhovka" class="booking_form--cottage_label">Ольховка</label>
+            <input type="radio" name="cottage_type" class="booking_form--cottage_input" id="olhovka">
+          </li>
+          <li class="booking_form--cottage_item">
+            <label for="portovy" class="booking_form--cottage_label">Портовый</label>
+            <input type="radio" name="cottage_type" class="booking_form--cottage_input" id="portovy">
+          </li>
+        </ul>
+
+        <div class="booking_form--cottage_param">
+          <ul class="booking_form--cottage_param_list">
+            <li class="booking_form--cottage_param_item">площадь 100м²</li>
+            <li class="booking_form--cottage_param_item">3 комнаты</li>
+            <li class="booking_form--cottage_param_item">5 спальных мест</li>
+            <li class="booking_form--cottage_param_item">раздельный санузел</li>
+            <li class="booking_form--cottage_param_item">wi-fi</li>
+          </ul>
+        </div>
+        <div class="booking_form--cottage_param">
+          <ul class="booking_form--cottage_param_list">
+            <li class="booking_form--cottage_param_item">плащадь 200м²</li>
+            <li class="booking_form--cottage_param_item">4 комнаты</li>
+            <li class="booking_form--cottage_param_item">6 спальных мест</li>
+            <li class="booking_form--cottage_param_item">раздельный санузел</li>
+            <li class="booking_form--cottage_param_item">wi-fi</li>
+          </ul>
+        </div>
+        <div class="booking_form--cottage_param">
+          <ul class="booking_form--cottage_param_list">
+            <li class="booking_form--cottage_param_item">площадь 300м²</li>
+            <li class="booking_form--cottage_param_item">5 комнат</li>
+            <li class="booking_form--cottage_param_item">7 спальных мест</li>
+            <li class="booking_form--cottage_param_item">раздельный санузел</li>
+            <li class="booking_form--cottage_param_item">wi-fi</li>
+          </ul>
+        </div>
+        <div class="booking_form--cottage_param">
+          <ul class="booking_form--cottage_param_list">
+            <li class="booking_form--cottage_param_item">площадь 50м²</li>
+            <li class="booking_form--cottage_param_item">2 комнаты</li>
+            <li class="booking_form--cottage_param_item">4 спальных места</li>
+            <li class="booking_form--cottage_param_item">совмещенный санузел</li>
+            <li class="booking_form--cottage_param_item">wi-fi</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+    <!-- /step 3 -->
+
+    <!-- step 4 -->
+    <div class="booking_form--step">
+      <div class="booking_form--inner">
+
+        <p class="booking_form--step_number">Шаг 4</p>
+        <h2 class="booking_form--step_title">Персональная информация</h2>
+
+        <div class="personal_data">
+          <div class="personal_data--wrap">
+            <label class="personal_data--label" for="">
+              <input class="personal_data--input" type="text" name="name" placeholder="имя" required>
+            </label>
+            <label class="personal_data--label" for="">
+              <input class="personal_data--input" type="text" name="surname" placeholder="фамилия" required>
+            </label>
+          </div>
+          <div class="personal_data--wrap">
+            <label class="personal_data--label" for="">
+              <input class="personal_data--input" type="tel" name="telephone" placeholder="номер телефона" required>
+              <p class="personal_data--explain">Мы свяжемся с вами в случае необходимости.</p>
+            </label>
+            <label class="personal_data--label" for="">
+              <input class="personal_data--input" type="email" name="email" placeholder="e-mail" required>
+              <p class="personal_data--explain">На этот адрес мы вышлем вам подтверждение о забронированном номере.</p>
+            </label>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- /step 4 -->
+
+    <!-- step 5 -->
+    <div class="booking_form--step">
+      <div class="booking_form--inner">
+
+        <p class="booking_form--step_number">Шаг 5</p>
+        <h2 class="booking_form--step_title">Способ оплаты</h2>
+
+
+
+      </div>
+    </div>
+    <!-- /step 5 -->
+
+  </form>
+  <!-- Form -->
+
+
+
+  <!-- Footer -->
+  <footer class="page_footer">
+    <div class="page_footer--inner">
+
+      <div class="page_footer--address">
+        <p>
+          г. Санкт-Петербург<br>
+          Приморское ш.600
+        </p>
+      </div>
+
+      <div class="page_footer--logo">
+        <a href="/" class="main_logo">
+          <img src="img/" alt="Логотип Green Valley">
+        </a>
+        <div class="page_footer--social">
+          <a href="" class="page_footer--social_link  page_footer--social_link-vk"></a>
+          <a href="" class="page_footer--social_link  page_footer--social_link-ig"></a>
+          <a href="" class="page_footer--social_link  page_footer--social_link-fb"></a>
+        </div>
+      </div>
+
+      <a class="page_footer--phone_link" href="tel:+78127775588">+7 812 777-55-88</a>
+      <a class="page_footer--email_link" href="mailto:info@greenvalley.ru">info@greenvalley.ru</a>
+
+    </div>
+  </footer>
+  <!-- Footer -->
+
+</body>
+
+</html>
