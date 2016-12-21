@@ -24,11 +24,11 @@ gulp.task('less', function(){
     .pipe(postcss([                                         // делаем постпроцессинг
         autoprefixer({ browsers: ['last 2 version'] }),     // автопрефиксирование
         mqpacker({ sort: true }),                           // объединение медиавыражений
-    ]))
+        ]))
     .pipe(sourcemaps.write('/'))                            // записываем карту кода как отдельный файл (путь из константы)
-    .pipe(gulp.dest(dirs.source + '/css/'))                              // записываем CSS-файл (путь из константы)
+    .pipe(gulp.dest(dirs.source + '/css/'))                 // записываем CSS-файл (путь из константы)
     .pipe(browserSync.stream());                            // обновляем в браузере
-});
+  });
 
 // ЗАДАЧА: Сборка HTML (заглушка)
 gulp.task('html', function(callback) {
@@ -38,7 +38,7 @@ gulp.task('html', function(callback) {
 // ЗАДАЧА: Сборка всего
 gulp.task('build', gulp.series(
   'less'
-));
+  ));
 
 // ЗАДАЧА: Локальный сервер, слежение
 gulp.task('serve', gulp.series('build', function() {
@@ -53,19 +53,19 @@ gulp.task('serve', gulp.series('build', function() {
   gulp.watch(                                               // следим за HTML
     dirs.source + '/*.html',
     gulp.series('html', reloader)                           // при изменении файлов запускаем пересборку HTML и обновление в браузере
-  );
+    );
 
   gulp.watch(                                               // следим за LESS
     dirs.source + '/less/**/*.less',
     gulp.series('less')                                     // при изменении запускаем компиляцию (обновление браузера — в задаче компиляции)
-  );
+    );
 
 }));
 
 // ЗАДАЧА: Задача по умолчанию
 gulp.task('default',
   gulp.series('serve')
-);
+  );
 
 // Дополнительная функция для перезагрузки в браузере
 function reloader(done) {

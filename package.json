@@ -2,15 +2,15 @@
   "name": "greenvalley.site",
   "version": "1.0.0",
   "description": "Start.",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "./node_modules/.bin/gulp"
-  },
   "author": "Roman Volkov",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git@github.com:vlkvr/greenvalley.site.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./node_modules/.bin/gulp"
   },
   "devDependencies": {
     "autoprefixer": "^6.4.0",
@@ -20,7 +20,9 @@
     "gulp-less": "^3.1.0",
     "gulp-postcss": "^6.1.1",
     "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.0.0",
     "gulp-sourcemaps": "^1.6.0",
+    "sass": "^0.5.0",
     "ttf2woff": "^2.0.1",
     "ttf2woff2": "^2.0.3"
   },
