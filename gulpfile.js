@@ -24,11 +24,11 @@ gulp.task('sass', function(){
     .pipe(postcss([                                         // делаем постпроцессинг
         autoprefixer({ browsers: ['last 2 version'] }),     // автопрефиксирование
         mqpacker({ sort: true }),                           // объединение медиавыражений
-    ]))
+        ]))
     .pipe(sourcemaps.write('/'))                            // записываем карту кода как отдельный файл (путь из константы)
     .pipe(gulp.dest(dirs.build + '/css/'))                  // записываем CSS-файл (путь из константы)
     .pipe(browserSync.stream());                            // обновляем в браузере
-});
+  });
 
 // ЗАДАЧА: Сборка HTML
 gulp.task('html', function() {
@@ -61,7 +61,7 @@ gulp.task('serve', gulp.series('build', function() {
   gulp.watch(                                               // следим за HTML
     dirs.source + '/*.html',
     gulp.series('html', reloader)                           // при изменении файлов запускаем пересборку HTML и обновление в браузере
-  );
+    );
 
   gulp.watch(                                               // следим за SCSS
     dirs.source + '/scss/**/*.scss',
@@ -73,7 +73,7 @@ gulp.task('serve', gulp.series('build', function() {
 // ЗАДАЧА: Задача по умолчанию
 gulp.task('default',
   gulp.series('serve')
-);
+  );
 
 // Дополнительная функция для перезагрузки в браузере
 function reloader(done) {
