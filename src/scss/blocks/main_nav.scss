@@ -1,0 +1,36 @@
+$logo-size: 50px;
+$logo-padding: 20px;
+$toggler-size: 30px;
+
+.main_nav {
+
+  width: 100%;
+
+  &--nav {
+    //display: none;
+  }
+
+  &--list {
+    list-style-type: none;
+  }
+
+  &--item {
+    border-top: 1px solid #ebebeb;
+    text-align: center;
+    line-height: 50px;
+  }
+
+  &--link {
+    display: block;
+  }
+
+  &--toggler {
+    position: absolute;
+    width: $toggler-size;
+    height: $toggler-size;
+    padding: 10px;
+    right: 0;
+    top: calc(#{$logo-padding} + 0.5 * #{$logo-size} - 0.5 * #{$toggler-size});
+    //transform: translateY(-50%);
+  }
+}

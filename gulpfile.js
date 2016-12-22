@@ -7,7 +7,7 @@ const dirs = pjson.config.directories;
 
 // Определим необходимые инструменты
 const gulp         = require('gulp');
-const less         = require('gulp-less');
+const sass         = require('gulp-sass');
 const rename       = require('gulp-rename');
 const sourcemaps   = require('gulp-sourcemaps');
 const postcss      = require('gulp-postcss');
@@ -16,10 +16,10 @@ const mqpacker     = require('css-mqpacker');
 const browserSync  = require('browser-sync').create();
 
 // ЗАДАЧА: Компиляция препроцессора
-gulp.task('less', function(){
-  return gulp.src(dirs.source + '/less/style.less')         // какой файл компилировать (путь из константы)
+gulp.task('sass', function(){
+  return gulp.src(dirs.source + '/scss/style.scss')         // какой файл компилировать (путь из константы)
     .pipe(sourcemaps.init())                                // инициируем карту кода
-    .pipe(less())                                           // компилируем LESS
+    .pipe(sass())                                           // компилируем SCSS
     .pipe(rename('style.css'))                              // переименовываем
     .pipe(postcss([                                         // делаем постпроцессинг
         autoprefixer({ browsers: ['last 2 version'] }),     // автопрефиксирование
@@ -36,9 +36,16 @@ gulp.task('html', function() {
   .pipe(gulp.dest(dirs.build));
 });
 
+// ЗАДАЧА: Перекидываем картинки (временно)
+gulp.task('img', function() {
+  return gulp.src(dirs.source + '/img/*')
+  .pipe(gulp.dest(dirs.build + '/img/'));
+});
+
+
 // ЗАДАЧА: Сборка всего
 gulp.task('build', gulp.series(
-  'less'
+  'sass', 'img'
 ));
 
 // ЗАДАЧА: Локальный сервер, слежение
@@ -56,9 +63,9 @@ gulp.task('serve', gulp.series('build', function() {
     gulp.series('html', reloader)                           // при изменении файлов запускаем пересборку HTML и обновление в браузере
   );
 
-  gulp.watch(                                               // следим за LESS
-    dirs.source + '/less/**/*.less',
-    gulp.series('less')                                     // при изменении запускаем компиляцию (обновление браузера — в задаче компиляции)
+  gulp.watch(                                               // следим за SCSS
+    dirs.source + '/scss/**/*.scss',
+    gulp.series('sass')                                     // при изменении запускаем компиляцию (обновление браузера — в задаче компиляции)
   );
 
 }));
