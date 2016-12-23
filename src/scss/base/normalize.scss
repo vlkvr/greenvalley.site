@@ -263,6 +263,7 @@ textarea {
   font: inherit; /* 2 */
   margin: 0; /* 3 */
   border-radius: 0;
+  border: none;
 }
 
 /**
@@ -271,6 +272,7 @@ textarea {
 
 button {
   overflow: visible;
+  background: none;
 }
 
 /**

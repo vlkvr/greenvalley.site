@@ -5,8 +5,7 @@
   border: 1px solid #ebebeb;
 
   &--inner {
-    //display: flex;
-    //justify-content: space-between;
+    @include container();
     background-color: #fff;
     padding: 0;
   }
@@ -26,5 +25,20 @@
   &--logo {
     padding-top: 20px;
     padding-bottom: 20px;
+  }
+
+  @media (min-width: 1200px) {
+    &--main_wrap {
+      flex-direction: row;
+    }
+
+    &--inner {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &--contacts_wrap {
+      display: flex;
+    }
   }
 }

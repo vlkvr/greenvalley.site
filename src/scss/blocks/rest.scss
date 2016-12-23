@@ -1,0 +1,29 @@
+.rest {
+  display: flex;
+  flex-direction: column-reverse;
+
+
+  &--inner {
+    @include container();
+  }
+
+  &--tabs {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+  }
+
+  &--slide {
+    position: relative;
+  }
+
+  &--slider {
+    height: 400px;
+  }
+
+  &--slide_bg {
+    position: absolute;
+    height: 400px;
+    width: 100%;
+  }
+}

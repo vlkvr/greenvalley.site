@@ -5,17 +5,16 @@
 
 @import './src/scss/base/normalize.scss'; // сброс
 @import './src/scss/base/base.scss'; // общие правила
+@import './src/scss/base/global.scss'; // общие правила
+@import './src/scss/base/mixins.scss';
+//@import './src/scss/grid.scss'; // сетка
 //@import './src/scss/fonts.scss'; // шрифты проекта
 //@import './src/scss/variables.scss'; // переменные проекта
-@import './src/scss/base/global.scss'; // общие правила
-
-//@import './src/scss/grid.scss'; // сетка
-//@import './src/scss/mixins/mixins.scss';
-
 
 
 // Подключение блоков
 
 @import './src/scss/blocks/page_header.scss';
 @import './src/scss/blocks/main_nav.scss';
+@import './src/scss/blocks/rest.scss';
 

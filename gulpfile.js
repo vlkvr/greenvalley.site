@@ -42,10 +42,15 @@ gulp.task('img', function() {
   .pipe(gulp.dest(dirs.build + '/img/'));
 });
 
+// ЗАДАЧА: Перекидываем скрипты (временно)
+gulp.task('js', function() {
+  return gulp.src(dirs.source + '/js/*')
+  .pipe(gulp.dest(dirs.build + '/js/'));
+});
 
 // ЗАДАЧА: Сборка всего
 gulp.task('build', gulp.series(
-  'sass', 'img'
+  'sass', 'img', 'js'
 ));
 
 // ЗАДАЧА: Локальный сервер, слежение
@@ -67,6 +72,11 @@ gulp.task('serve', gulp.series('build', function() {
     dirs.source + '/scss/**/*.scss',
     gulp.series('sass')                                     // при изменении запускаем компиляцию (обновление браузера — в задаче компиляции)
   );
+
+  gulp.watch(                                               // следим за JS (временно)
+    dirs.source + '/**/*.js',
+    gulp.series('js', reloader)                           // при изменении файлов запускаем пересборку JS и обновление в браузере
+    );
 
 }));
 
