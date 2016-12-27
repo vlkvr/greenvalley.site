@@ -17,17 +17,17 @@ const browserSync  = require('browser-sync').create();
 
 // ЗАДАЧА: Компиляция препроцессора
 gulp.task('sass', function(){
-  return gulp.src(dirs.source + '/scss/style.scss')         // какой файл компилировать (путь из константы)
+  return gulp.src(dirs.source + '/scss/main.scss')          // какой файл компилировать (путь из константы)
     .pipe(sourcemaps.init())                                // инициируем карту кода
     .pipe(sass())                                           // компилируем SCSS
-    .pipe(rename('style.css'))                              // переименовываем
     .pipe(postcss([                                         // делаем постпроцессинг
         autoprefixer({ browsers: ['last 2 version'] }),     // автопрефиксирование
         mqpacker({ sort: true }),                           // объединение медиавыражений
         ]))
     .pipe(sourcemaps.write('/'))                            // записываем карту кода как отдельный файл (путь из константы)
+    .pipe(browserSync.stream())                            // обновляем в браузере
+    .pipe(rename('style.css'))                              // переименовываем
     .pipe(gulp.dest(dirs.build + '/css/'))                  // записываем CSS-файл (путь из константы)
-    .pipe(browserSync.stream());                            // обновляем в браузере
   });
 
 // ЗАДАЧА: Сборка HTML
@@ -51,7 +51,7 @@ gulp.task('js', function() {
 // ЗАДАЧА: Сборка всего
 gulp.task('build', gulp.series(
   'sass', 'img', 'js'
-));
+  ));
 
 // ЗАДАЧА: Локальный сервер, слежение
 gulp.task('serve', gulp.series('build', function() {
@@ -60,7 +60,8 @@ gulp.task('serve', gulp.series('build', function() {
     server: dirs.build,                                     // папка, которая будет «корнем» сервера (путь из константы)
     port: 3000,                                             // порт, на котором будет работать сервер
     startPath: 'index.html',                                // файл, который буде открываться в браузере при старте сервера
-    //open: false,                                            // чтобы при каждом старте сервера в браузере не открывалась новая вкладка со страницей
+    notify: false
+    //open: false                                             // чтобы при каждом старте сервера в браузере не открывалась новая вкладка со страницей
   });
 
   gulp.watch(                                               // следим за HTML
@@ -70,8 +71,8 @@ gulp.task('serve', gulp.series('build', function() {
 
   gulp.watch(                                               // следим за SCSS
     dirs.source + '/scss/**/*.scss',
-    gulp.series('sass')                                     // при изменении запускаем компиляцию (обновление браузера — в задаче компиляции)
-  );
+    gulp.series('sass', reloader)                           // при изменении запускаем компиляцию (обновление браузера — в задаче компиляции)
+    );
 
   gulp.watch(                                               // следим за JS (временно)
     dirs.source + '/**/*.js',

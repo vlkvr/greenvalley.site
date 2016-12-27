@@ -4,6 +4,10 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans:500,400&subset=cyrillic-ext,latin);
+@import url(https://fonts.googleapis.com/css?family=PT+Serif&subset=cyrillic-ext,latin);
+@import url(https://fonts.googleapis.com/css?family=PT+Serif+Caption&subset=cyrillic-ext,latin);
+@import url(https://fonts.googleapis.com/css?family=PT+Sans+Caption:700&subset=latin,cyrillic-ext);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -475,36 +479,18 @@ progress[aria-valuenow]:before {
 input {
   -webkit-appearance: none; }
 
-/* .wrap {
-  min-width: 320px;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin: auto;
-
-  @media (min-width: 1200px) {
-    max-width: 1200px;
-  }
-} */
 .page_header {
-  background-color: #ccc;
   border: 1px solid #ebebeb; }
-  .page_header--inner {
-    min-width: 320px;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin: auto;
-    background-color: #fff;
-    padding: 0; }
-  .page_header--main_wrap {
+  .page_header--wrap_left {
+    position: relative;
     display: -ms-flexbox;
     display: flex;
-    position: relative;
     -ms-flex-direction: column;
         flex-direction: column;
     -ms-flex-align: center;
         align-items: center;
     width: 100%; }
-  .page_header--contacts_wrap {
+  .page_header--wrap_right {
     display: none; }
   .page_header--logo {
     padding-top: 20px;
@@ -522,29 +508,52 @@ input {
     line-height: 50px; }
   .main_nav--link {
     display: block;
-    text-transform: uppercase;
-    color: #000; }
+    color: #191919;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 14px;
+    text-transform: uppercase; }
+    .main_nav--link:hover {
+      color: #ff7435; }
   .main_nav--toggler {
     position: absolute;
-    width: 20px;
-    height: 20px;
-    padding: 10px;
-    right: 20px;
-    top: calc(20px + 0.5 * 50px - 0.5 * 20px);
-    background-image: url(../img/icon-burger.png);
-    background-repeat: no-repeat;
-    background-size: cover; }
+    top: calc(20px + 0.5 * (50px - 30px));
+    right: 0;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+    padding: 0;
+    font-size: 0; }
+    .main_nav--toggler span {
+      position: absolute;
+      right: 0;
+      display: inline-block;
+      width: 100%;
+      height: 6px;
+      transform: translateY(-3px);
+      background-color: #ff7435; }
+      .main_nav--toggler span:before {
+        content: '';
+        position: absolute;
+        top: -10px;
+        right: 0;
+        width: 100%;
+        height: 6px;
+        background-color: #ff7435; }
+      .main_nav--toggler span:after {
+        content: '';
+        position: absolute;
+        top: 10px;
+        right: 0;
+        width: 100%;
+        height: 6px;
+        background-color: #ff7435; }
 
 .rest {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column-reverse;
       flex-direction: column-reverse; }
-  .rest--inner {
-    min-width: 320px;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin: auto; }
   .rest--tabs {
     display: -ms-flexbox;
     display: flex;
@@ -552,36 +561,113 @@ input {
         justify-content: center;
     list-style-type: none; }
   .rest--slide {
-    position: relative; }
-  .rest--slider {
-    height: 400px; }
+    position: relative;
+    overflow: hidden;
+    min-height: 320px; }
   .rest--slide_bg {
+    z-index: -1;
     position: absolute;
-    height: 400px;
-    width: 100%; }
-  @media (min-width: 1200px) {
-  .page_header--inner {
-    max-width: 1200px; }
-  .page_header--main_wrap {
-    -ms-flex-direction: row;
-    flex-direction: row; }
-  .page_header--inner {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    max-width: inherit;
+    min-height: 100%;
+    width: auto;
+    height: auto; }
+  .rest--slide_title h1 {
+    color: #1c1c1c;
+    font-family: 'PT Serif Caption', serif;
+    font-size: 18px;
+    background-color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    padding: 10px 20px; }
+  .rest--slide_desc p {
+    color: #1c1c1c;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    padding: 10px 20px; }
+  @media (min-width: 768px){
+  .rest--inner{
+    min-width: 320px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: auto; }
+  .rest--slide_title{
+    width: 66%;
+    margin: 20px 0; }
+  .rest--slide_desc{
+    width: 66%;
+    margin: 20px 0; }
+  .rest--slide_title h1{
+    display: inline;
+    padding: 1px 0;
+    font-size: 36px;
+    line-height: 50px;
+    text-align: left;
+    box-shadow: 10px 0 0 rgba(255, 255, 255, 0.9), -10px 0 0 rgba(255, 255, 255, 0.9); }
+  .rest--slide_desc p{
+    display: inline;
+    padding: 2px 0;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: left;
+    box-shadow: 10px 0 0 rgba(255, 255, 255, 0.9), -10px 0 0 rgba(255, 255, 255, 0.9); } }
+  @media (min-width: 768px) and (min-width: 768px){
+  .rest--inner{
+    max-width: 768px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: auto; } }
+  @media (min-width: 1200px){
+  .page_header--inner{
+    min-width: 320px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: auto;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: justify;
     justify-content: space-between; }
-  .page_header--contacts_wrap {
+  .page_header--wrap_left{
+    -ms-flex-direction: row;
+    flex-direction: row; }
+  .page_header--wrap_right{
     display: -ms-flexbox;
     display: flex; }
-  .main_nav--nav {
+  .main_nav--nav{
     display: block; }
-  .main_nav--toggler {
+  .main_nav--toggler{
     display: none; }
-  .main_nav--item {
+  .main_nav--item{
     display: inline-block;
     border-top: none;
-    line-height: inherit; }
-  .rest--inner {
-    max-width: 1200px; } }
+    line-height: inherit; } }
+  @media (min-width: 1200px) and (min-width: 768px){
+  .page_header--inner{
+    max-width: 768px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: auto; } }
+  @media (min-width: 1200px) and (min-width: 1200px){
+  .page_header--inner{
+    max-width: 1200px;
+    padding-left: 10px;
+    padding-right: 10px; } }
+  @media (min-width: 768px) and (min-width: 1200px){
+  .rest--inner{
+    max-width: 1200px;
+    padding-left: 10px;
+    padding-right: 10px; }
+  .rest--slide{
+    min-height: 430px; }
+  .rest--slide_title{
+    width: 66%;
+    margin: 80px 0 20px; }
+  .rest--slide_desc{
+    width: 66%;
+    margin: 0 0 20px; } }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=main.css.map */

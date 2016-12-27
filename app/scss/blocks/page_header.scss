@@ -1,24 +1,22 @@
 .page_header {
-  background-color: #ccc;
+  //background-color: #ccc;
   //padding-top: 20px;
   //padding-bottom: 20px;
   border: 1px solid #ebebeb;
 
   &--inner {
-    @include container();
-    background-color: #fff;
-    padding: 0;
+    //background-color: #ffe;
   }
 
-  &--main_wrap {
-    display: flex;
+  &--wrap_left {
     position: relative;
+    display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
   }
 
-  &--contacts_wrap {
+  &--wrap_right {
     display: none;
   }
 
@@ -28,16 +26,18 @@
   }
 
   @media (min-width: 1200px) {
-    &--main_wrap {
-      flex-direction: row;
-    }
 
     &--inner {
+      @include container();
       display: flex;
       justify-content: space-between;
     }
 
-    &--contacts_wrap {
+    &--wrap_left {
+      flex-direction: row;
+    }
+
+    &--wrap_right {
       display: flex;
     }
   }
