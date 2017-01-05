@@ -1,0 +1,28 @@
+.btn {
+  display: block;
+  margin: auto;
+  padding: 10px 30px;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
+  color: #fff;
+
+  &-bg_orange {
+    background-color: #ff7435;
+    border-radius: 50px;
+
+    &:hover {
+      background-color: #e85715;
+    }
+  }
+
+  &-icon_calendar {
+    position: relative;
+    padding-left: 50px;
+    background-image: url('../img/icon-calendar.png');
+    background-repeat: no-repeat;
+    background-position: 25px 10px;
+  }
+}

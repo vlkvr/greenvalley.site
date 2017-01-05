@@ -1,12 +1,5 @@
 .page_header {
-  //background-color: #ccc;
-  //padding-top: 20px;
-  //padding-bottom: 20px;
   border: 1px solid #ebebeb;
-
-  &--inner {
-    //background-color: #ffe;
-  }
 
   &--wrap_left {
     position: relative;
@@ -21,8 +14,8 @@
   }
 
   &--logo {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    max-width: 200px;
+    margin: 20px 0;
   }
 
   @media (min-width: 1200px) {
@@ -30,15 +23,44 @@
     &--inner {
       @include container();
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
+      //align-items: center;
     }
 
     &--wrap_left {
       flex-direction: row;
+      margin-right: 10px;
     }
 
     &--wrap_right {
       display: flex;
+    }
+
+    &--contacts {
+      margin: 0 10px;
+      width: 300px;
+    }
+
+    &--phone_link {
+      display: inline-block;
+      font-family: 'PT Serif Caption', serif;
+      font-size: 18px;
+      font-weight: bold;
+      color: #191919;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      margin: 20px 0 10px;
+
+    }
+
+    &--address {
+      display: block;
+      font-family: 'Fira Sans', sans-serif;
+      font-size: 14px;
+      color: #191919;
+      letter-spacing: .5px;
+      margin-bottom: 15px;
     }
   }
 }
